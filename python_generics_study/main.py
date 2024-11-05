@@ -1,4 +1,4 @@
-from typing import List, TypeVar, Generic
+from typing import List, TypeVar, Generic, Callable
 T = TypeVar('T')
 
 class MyType:
@@ -14,6 +14,7 @@ class Consumer(Generic[T]):
 
     def consume(self) -> T:
         return self.value
+
 
 if __name__ == "__main__":
     consumer = Consumer(1)
